@@ -1,5 +1,7 @@
 import { createCharacterCard } from "./components/card/card.js";
 
+import { createButton } from "./components/nav-button/nav-button.js";
+
 const cardContainer = document.querySelector('[data-js="card-container"]');
 const searchBarContainer = document.querySelector(
   '[data-js="search-bar-container"]'
@@ -14,6 +16,8 @@ const pagination = document.querySelector('[data-js="pagination"]');
 let maxPage = 42;
 let page = 1;
 let searchQuery = "";
+
+createButton(navigation);
 
 // fetch Character function start
 async function fetchCharacter(page, searchQuery) {
