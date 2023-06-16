@@ -1,3 +1,4 @@
+// creating the character card to later be appended throught the fetchCharacter function in index.js
 export function createCharacterCard(character) {
   const createdCard = document.createElement("li");
   createdCard.classList.add("card");
@@ -16,9 +17,9 @@ export function createCharacterCard(character) {
         <dt class="card__info-title">Status</dt>
         <dd class="card__info-description">${character.status}</dd>
         <dt class="card__info-title">Type</dt>
-        <dd class="card__info-description"></dd>
+        <dd class="card__info-description">${character.type}</dd>
         <dt class="card__info-title">Occurrences</dt>
-        <dd class="card__info-description">${character.occurrences}</dd>
+        <dd class="card__info-description">${character.episode.length}</dd>
       </dl>
     </div>
 `;
